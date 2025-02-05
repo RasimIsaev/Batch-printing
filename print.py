@@ -118,10 +118,10 @@ class BatchPrinterApp:
         for file in self.files_list:
             try:
                 for _ in range(copies):
-                    win32api.ShellExecute(0, "print", file, f'"{printer}"', ".", 0)
+                    win32api.ShellExecute(0, "печать", file, f'"{printer}"', ".", 0)
                     time.sleep(2)  # \u0414\u043e\u0431\u0430\u0432\u043b\u044f\u0435\u043c за\u0434\u0435\u0440\u0436\u043a\u0443 в 2 с\u0435\u043a\u0443\u043d\u0434\u044b
             except Exception as e:
-                messagebox.showerror("Print Error", f"Failed to print {file}: {str(e)}")
+                messagebox.showerror("Ошибка печати", f"Ошибка при печати {file}: {str(e)}")
 
         messagebox.showinfo("У\u0432е\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0435", "\u0417\u0430\u0434\u0430\u043d\u0438\u044f \u043d\u0430 \u043f\u0435\u0447\u0430\u0442\u044c \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u044b!")
 
